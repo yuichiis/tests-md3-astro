@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/header.astro';
+import Banner from '../components/banner.astro';
+import AbautMe from '../components/abautMe.astro';
+import Skills from '../components/Skills.astro';
+import Progects from '../components/Progects.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/footer.astro';
+
+const NAME = "Material 3";
+const SUBNAME = "Material Component Android";
+const ABAUT= "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo est, a autem consectetur, accusantium, velit repudiandae tempore magnam veritatis quam pariatur quisquam fugit error beatae sit iure ex debitis voluptatum!";
+---
+
+<Layout title={NAME} >
+	<Header />
+	<Banner title={NAME} subTitle={SUBNAME} />
+	<main>
+		<div id="main">
+			<AbautMe abautMe={ABAUT}/>
+            <Skills />
+            <Progects />
+            <Contact />
+		</div>
+	</main>
+    <Footer/>
+</Layout>
+<style>
+    body{
+        background-color: pink;
+    }
+    @keyframes cambiar{
+			0%{background-position: 0 50%;}
+			50%{background-position: 100% 50%;}
+			100%{background-position: 0 50%;}
+	}
+    #svg-container{
+        padding: 0 40px 40px 40px ;
+    }
+    #main{
+        margin: 0 150px;
+    }
+    main h1{
+     font-size: 3em;
+     margin-bottom: 0;
+    }
+
+@media (max-width: 948px) {
+    main h1{
+        font-size: 2em;
+    }
+    main p {
+        margin: 0;
+    }
+    #main{
+        margin: 10%;
+    }
+}
+
+@media (max-width: 576px) {
+    #main {
+        margin: 0 20px;
+    }
+}
+
+
+</style>

@@ -1,0 +1,32 @@
+---
+interface Props {
+    abautMe: string;
+}
+
+const {abautMe} = Astro.props;
+---
+<div id="SMi" class="classificacion">
+    <h1>Abaut Me</h1>
+    <p>{abautMe}</p>
+<style>
+    div{
+        padding: 20px;
+        font-size: 18px;
+    }
+    h1{
+     font-size: 3em;
+     margin-bottom: 0;
+    }
+@media (max-width: 948px) {
+    .classificacion{
+        margin: 0%;
+        padding: 20px;
+        font-size: 18px;
+    }
+}
+ @media (max-width: 576px) {
+    #SMi{
+        margin-top: 60px;
+    }
+ }
+</style>
